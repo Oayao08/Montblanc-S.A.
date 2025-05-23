@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Montblanc S.A. | Botiga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    main {
+      padding: 60px 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #00bcd4;
+      margin-bottom: 40px;
+    }
+    .category {
+      margin-bottom: 60px;
+    }
+    .category h2 {
+      margin-bottom: 20px;
+      color: #1a1a1a;
+      font-size: 1.8rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .product {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .product h3 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+    .product p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0097a7;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Montblanc S.A.</div>
+        <ul>
+          <li><a href="Empresa.html">Inici</a></li>
+          <li><a href="serveis.html">Serveis</a></li>
+          <li><a href="visio.html">Visió futura</a></li>
+          <li><a href="Botiga.html">Botiga</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>La nostra botiga</h1>
+
+    <div class="category">
+      <h2>Roba de treball</h2>
+      <div class="products-grid">
+        <div class="product">
+          <img src="https://imgs.search.brave.com/jeEdlSBk8TSmPGytQHJkxZJInMe6UTyzze-oF2xe8Jg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vOE5GX0Ri/QnlKWFloRURvdmJJ/aEgxOU1UT3lVbUJq/bVJ4T2dha2NoZWEt/MC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkz/ZDNjdS9jSEp2YkdG/aWIzSmhiQzVqL2Iy/MHZNakExTXpFdGFH/OXQvWlY5a1pXWmhk/V3gwTDIxdi9ibTh0/YzNSeVpYUmphQzA0/L056Y3dZeTVxY0dj" alt="Mono Industrial">
+          <h3>Mono Industrial</h3>
+          <p>Resistent, còmode i ideal per a tasques exigents.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+
+        <div class="product">
+          <img src="https://imgs.search.brave.com/jr2XBLcB1LG5UggKAxaaPtRnJDaUnAS_jPdlVYzgfBQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vdmhNemh6/eFlnUEM4WVV2U21T/ZFRsQ3RyMGQ2cDFV/NUlJRmVVcVl6LWhL/Yy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkz/ZDNjdS9ZVzVpZFhO/aFptVjBlUzVqL2Iy/MHZkM0F0WTI5dWRH/VnUvZEM5MWNHeHZZ/V1J6THpJdy9NakV2/TVRJdlNXNWtkWE4w/L2NtbGhiQzFUWVda/bGRIa3QvUTI5MlpY/SmhiR3d0VTBNdy9O/UzVxY0dj" alt="Jaqueta Reflectant">
+          <h3>Jaqueta Reflectant</h3>
+          <p>Alta visibilitat per a entorns amb poca llum.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+        
+        <div class="product">
+          <img src="https://imgs.search.brave.com/S3Wsapq9UQOG0GIdvLLm_SWN84KS6ERgrAMzg8HcU6w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20veDJLNmNJ/cmE0WDA1QlRUSm1s/QjdmSVBUVWN4c1dr/NS1ZVDRFR00xVnE3/NC9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/TG0xbC9aR2xoTFdG/dFlYcHZiaTVqL2Iy/MHZhVzFoWjJWekww/a3YvTlRGUGJrNDFT/RVpPTmt3dS9hbkJu" alt="Pantalons Tècnics">
+          <h3>Pantalons Tècnics</h3>
+          <p>Impermeables, resistents i amb butxaques funcionals.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+
+        </div>
+        <div class="product">
+          <img src="https://imgs.search.brave.com/NIxBmIDpM8jG4aNHwrRdZIHCw_UT1ew6_iBh3awbk2g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vNDh4WGV1/dE9CT1JKU1Z6TzBJ/RDZTYkR1TzNjWnpy/eTFNUnMtMzZYYW8w/WS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlv/ZEhSdy9NaTV0YkhO/MFlYUnBZeTVqL2Iy/MHZSRjlSWDA1UVh6/SlkvWHpZeU9UWTVN/UzFOVEVNMS9ORFE0/TlRRek1EUXlNMTh3/L016SXdNak10UlMx/bmRXRnUvZEdVdFlX/NTBhV052Y25SbC9M/V1p2Y21ObExYQnli/M1JsL1kzUnBiMjR0/YkMweE1EQXcvTFc1/cGRtVnNMVFV1ZDJW/aS9jQQ" alt="Guants Antitall">
+          <h3>Guants Antitall</h3>
+          <p>Protecció de mans certificada per a treballs de risc.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h2>Textil corporatiu</h2>
+      <div class="products-grid">
+        <div class="product">
+          <img src="https://imgs.search.brave.com/tPltDU1uLxU5NpRb7WtLEyh3JN7kb22RZENj6s6hb8I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vMmJHX2xK/T0RnT2VRRVE1aUZ6/ajNUa0NqRjM1Y1lj/eDQ0TWNvNTB0bHBX/RS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/TG0xbC9aR2xoTFdG/dFlYcHZiaTVqL2Iy/MHZhVzFoWjJWekww/a3YvTmpGMVlqQkVW/V1p0ZWt3dS9hbkJu" alt="Samarreta amb Logo">
+          <h3>Samarreta amb Logo</h3>
+          <p>Impressió de qualitat amb la imatge corporativa.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+        <div class="product">
+          <img src="https://imgs.search.brave.com/HxEFyYNStsOfl7vMQYmqrtwAVqrh9E1qHA71wt7W-Ls/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vSU1MdzBz/aG9qeElRQkU2MzJ5/aElETlBkX3duckxv/eFZQbk9jSEdEY1gz/cy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlw/Yldjdy9NUzU2ZEdG/MExtNWxkQzloL2Nu/UnBZMnhsTDNOd2ND/MXQvWldScFlTMXdN/UzlsWm1RNS9ZbUky/TkRGbU5qTTBOR05s/L09USTRPV1ppT0RN/eVlUbGovTTJNNE9T/OWhOakF4T1RCbS9N/bUV6TVRjMFltVmhP/VGN3L09EVmtaVEJs/T1RZek5tRmsvWXk1/cWNHY19hVzEzYVdS/MC9hRDB6TURBbVpt/bHNkR1Z5L1BYQmhZ/MnR6YUc5MA" alt="Polo d'empresa">
+          <h3>Polo d'empresa</h3>
+          <p>Elegant i còmode per esdeveniments o atenció al públic.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+        <div class="product">
+          <img src="https://imgs.search.brave.com/I9cwCQvTB77ILcdCuDPL3_WZHdUwIayKVpLF2faD8FE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vZ1NtU3l3/bzFKUzh3OENSUm9J/ZnJqaW84bzFMdFRf/X3BtcEdVN1ZVOTkx/TS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/TG0xbC9aR2xoTFdG/dFlYcHZiaTVqL2Iy/MHZhVzFoWjJWekww/a3YvTlRGUU1tRk9N/SFFyVVV3dS9hbkJu.jpeg" alt="Jaqueta Corporativa">
+          <h3>Jaqueta Corporativa</h3>
+          <p>Protecció i imatge professional per a l'equip.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+        <div class="product">
+          <img src="https://imgs.search.brave.com/WaUiR-PF5HkEF4qvMJI1bgGa-chUcbCmi-7t82J13Wk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vLUhfOWwx/RGY3cEdKMkNxeF9K/ZEg4VUhSNkpMVXNT/UnlMbmpRS2E2Y3Bi/Zy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTkz/ZDNjdS9jR1Z5Wm5W/dFpYSnBZWE5oL2Rt/VnVhV1JoTG1OdmJT/OXcvZFdJdmJXVmth/V0V2WTJGMC9ZV3h2/Wnk5d2NtOWtkV04w/L0wyTmhZMmhsTHpS/bVltTmsvTkRRMk56/RXlNRFkyWldOai9a/V0V5Wm1Vd01ETm1N/V00wL09XWmlMemt2/TlM4NU5UQXovTjE4/eExXMXZiblJpYkdG/dS9ZeTF5WldkaGJH/OHRaMjl5L2NtRXRa/M0pwY3k1cWNHYw" alt="Gorra Logo">
+          <h3>Gorra amb Logo</h3>
+          <p>Personalitzada amb brodat o serigrafia.</p>
+          <button class="btn">Afegir al carretó</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Montblanc S.A. | Tots els drets reservats</p>
+  </footer>
+
+</body>
+</html>
