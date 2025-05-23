@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serveis</title>
+  <style>
+    /* --- MENÚ DE NAVEGACIÓ --- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 20px 40px;
+      font-family: sans-serif;
+    }
+header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color:#ffffff
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links li a:hover {
+      color: #ffffff;
+    }
+
+    /* SEPARADOR */
+    .separator {
+      border: none;
+      height: 2px;
+      background-color: #00bcd4;
+      margin: 60px auto;
+      width: 60%;
+    }
+
+    /* ESTILS DE LA SECCIÓ SERVEIS */
+    .serveis {
+      padding: 90px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .titol-seccio {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    .subtitol {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      color: #666;
+    }
+
+    .serveis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .servei {
+      background-color: #8d8383;
+      padding: 35px 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .servei:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 188, 212, 0.2);
+    }
+
+    .servei img {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .servei:hover img {
+      transform: scale(1.1);
+    }
+
+    .servei h3 {
+      font-size: 1.4rem;
+      color: #f8fffe;
+      margin-bottom: 12px;
+    }
+
+    .servei p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @media screen and (max-width: 600px) {
+      .titol-seccio {
+        font-size: 2.2rem;
+      }
+
+      .servei {
+        padding: 25px 20px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENÚ DE NAVEGACIÓ -->
+  <nav class="navbar">
+    <div class="logo">Montblanc S.A.</div>
+    <ul class="nav-links">
+          <li><a href="Empresa.html">Inici</a></li>
+          <li><a href="serveis.html">Serveis</a></li>
+          <li><a href="visio.html">Visió futura</a></li>
+          <li><a href="Botiga.html">Botiga</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECCIÓ SERVEIS -->
+  <section class="serveis" id="serveis">
+    <div class="container">
+      <h2 class="titol-seccio">Els nostres serveis</h2>
+      <p class="subtitol">A Montblanc S.A., integrem solucions digitals intel·ligents per a la indústria del futur. Oferim serveis especialitzats per transformar els processos tradicionals en operacions eficients, sostenibles i completament connectades.</p>
+
+      <section>
+        <h3>Introducció</h3>
+        <p>Amb una visió clara cap al futur, acompanyem les empreses en el seu procés de digitalització, 
+          <br>integrant eines com la intel·ligència artificial, la internet de les coses (IoT) o el Big Data 
+          <br>per transformar completament la seva manera de treballar.</p>
+      </section>
+
+      <hr class="separator">
+
+      <section id="equip">
+        <h3>El nostre equip</h3>
+        <p>
+          <strong>Laura Vidal</strong><br>
+          Responsable de Transformació Digital<br>
+          Amb més de 10 anys d’experiència en indústria 4.0, lidera la integració de tecnologies innovadores a Montblanc S.A.
+          <br><br>
+          <strong>Roberto Lobato</strong><br>
+          Enginyer de sistemes i dades<br>
+          Especialitzat en sensors intel·ligents i anàlisi de dades per a la millora de processos productius.
+        </p>
+      </section>
+      
+      <hr class="separator">
+
+    </section>
+    <div class="serveis-grid">
+      <div class="servei">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833593.png" alt="Automatització" />
+        <h3>Automatització de processos</h3>
+        <p>Optimitzem les línies de producció incorporant sistemes robòtics i tecnologies IoT. Això permet monitorització en temps real, reducció d'errors humans i un augment notable de la productivitat.</p>
+      </div>
+
+      <div class="servei">
+        <img src="https://cdn-icons-png.flaticon.com/512/3125/3125713.png" alt="Anàlisi de dades" />
+        <h3>Anàlisi de dades industrials</h3>
+        <p>Recollim i processem dades de sensors, màquines i vendes per obtenir informes clars, prediccions precises i recomanacions estratègiques. La presa de decisions es torna més ràpida i fonamentada.</p>
+      </div>
+
+      <div class="servei">
+        <img src="https://cdn-icons-png.flaticon.com/512/4768/4768988.png" alt="Gestió de residus" />
+        <h3>Gestió ambiental intel·ligent</h3>
+        <p>Introduïm sistemes de mesura automàtica de residus, identificació de punts crítics i alertes per millorar l'eficiència en el reciclatge i la sostenibilitat global de la producció.</p>
+      </div>
+
+      <div class="servei">
+        <img src="https://cdn-icons-png.flaticon.com/512/3589/3589421.png" alt="Control de qualitat" />
+        <h3>Control de qualitat avançat</h3>
+        <p>Digitalitzem la supervisió de qualitat mitjançant visió artificial i IA, reduint els errors humans i garantint estàndards consistents. El sistema aprèn i millora contínuament.</p>
+      </div>
+
+      <div class="servei">
+        <img src="https://cdn-icons-png.flaticon.com/512/10468/10468959.png" alt="Logística" />
+        <h3>Logística i distribució intel·ligent</h3>
+        <p>Implementem eines digitals per gestionar en temps real l’enviament i el seguiment dels productes. Això millora l’entrega puntual, la satisfacció del client i la gestió d’inventari.</p>
+      </div>
+    </div>
+  </div>
+</section>
+      <div class="serveis-grid">
+        <!-- ... -->
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
