@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Montblanc S.A. | Indústria intel·ligent</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -18,23 +17,16 @@
       background-color: #f4f4f4;
       color: #333;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
-    #particles-js {
+    /* Preloader */
+    #preloader {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 100vw;
       height: 100vh;
-      z-index: 0;
-    }
-
-    #preloader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background: white;
+      background-color: white;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,8 +42,6 @@
       color: white;
       padding: 20px 0;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      position: relative;
-      z-index: 2;
     }
 
     .container {
@@ -90,6 +80,7 @@
     }
 
     .hero {
+      background: url('https://images.unsplash.com/photo-1581091215367-59c3dc3833e9') no-repeat center center/cover;
       height: 80vh;
       display: flex;
       align-items: center;
@@ -97,7 +88,6 @@
       text-align: center;
       color: white;
       position: relative;
-      z-index: 1;
     }
 
     .hero::before {
@@ -144,8 +134,6 @@
     section.features {
       padding: 60px 0;
       background-color: white;
-      position: relative;
-      z-index: 2;
     }
 
     .features-grid {
@@ -161,7 +149,6 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
-      transition: all 0.8s ease;
     }
 
     .feature h3 {
@@ -175,47 +162,15 @@
       text-align: center;
       padding: 30px 0;
       margin-top: 40px;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Botó scroll */
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #00bcd4;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-    }
-
-    /* Cursor personalitzat */
-    #custom-cursor {
-      width: 15px;
-      height: 15px;
-      border: 2px solid #00bcd4;
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 10000;
-      transform: translate(-50%, -50%);
     }
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
 
+  <!-- Preloader amb GIF -->
   <div id="preloader">
     <img src="https://i.pinimg.com/originals/44/0b/9d/440b9dc08fefeff13ec30dc0ae6a09df.gif" alt="Carregant...">
   </div>
-
-  <div id="custom-cursor"></div>
 
   <header>
     <div class="container">
@@ -233,9 +188,9 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h1></h1>
+      <h1>Transformació Digital Industrial</h1>
       <p>Optimitzem la producció, millorem la traçabilitat i reduïm l’impacte ambiental a través de la innovació.</p>
-      <a href="serveis.html" class="btn">Descobreix més</a>
+      <button class="btn"><a href="serveis.html">Descobreix més</a></button>
     </div>
   </section>
 
@@ -261,101 +216,13 @@
     <p>&copy; 2025 Montblanc S.A. | Tots els drets reservats</p>
   </footer>
 
-  <button id="topBtn">↑</button>
-
   <script>
-    // Preloader
+    // Espera 3 segons abans d'ocultar el GIF
     window.addEventListener('load', () => {
       setTimeout(() => {
-        document.getElementById('preloader').style.display = 'none';
-      }, 3000);
-    });
-
-    // Partícules
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#00bcd4" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: 4 },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#00bcd4",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          out_mode: "out"
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: { onhover: { enable: true, mode: "grab" } },
-        modes: {
-          grab: { distance: 140, line_linked: { opacity: 0.6 } }
-        }
-      },
-      retina_detect: true
-    });
-
-    // Tipus de text
-    const typingText = "Transformació Digital Industrial";
-    let i = 0;
-    const h1 = document.querySelector('.hero h1');
-    function type() {
-      if (i < typingText.length) {
-        h1.textContent += typingText.charAt(i);
-        i++;
-        setTimeout(type, 80);
-      }
-    }
-    type();
-
-    // Scroll reveal features
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = "translateY(0)";
-        }
-      });
-    }, { threshold: 0.3 });
-
-    document.querySelectorAll(".feature").forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = "translateY(50px)";
-      observer.observe(el);
-    });
-
-    // Mode fosc segons hora
-    const hour = new Date().getHours();
-    if (hour >= 19 || hour < 7) {
-      document.body.style.backgroundColor = "#111";
-      document.body.style.color = "#eee";
-      document.querySelectorAll(".feature").forEach(el => {
-        el.style.backgroundColor = "#1f1f1f";
-        el.style.color = "#fff";
-      });
-    }
-
-    // Scroll to top
-    const btn = document.getElementById("topBtn");
-    window.addEventListener("scroll", () => {
-      btn.style.display = window.scrollY > 200 ? "block" : "none";
-    });
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Cursor personalitzat
-    const cursor = document.getElementById("custom-cursor");
-    document.addEventListener("mousemove", e => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+      }, 3000); // 3000 ms = 3 segons
     });
   </script>
 
