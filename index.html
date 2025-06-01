@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Montblanc S.A. - Indústria intel·ligent, eficient i sostenible.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Montblanc S.A. - Indústria intel·ligent, eficient i sostenible." />
   <title>Montblanc S.A. | Indústria intel·ligent</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -50,7 +50,7 @@
       background-color: #1a1a1a;
       color: white;
       padding: 15px 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     .container {
@@ -88,28 +88,40 @@
       color: #00bcd4;
     }
 
+    /* Hero amb efecte parallax */
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-        url('https://images.unsplash.com/photo-1581091215367-59c3dc3833e9') no-repeat center center/cover;
+      position: relative;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('https://cdn.pixabay.com/photo/2016/11/29/04/44/boots-1867379_1280.jpg') no-repeat
+          center center/cover;
       height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      position: relative;
+
+      /* Parallax */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .hero-content {
       max-width: 800px;
       padding: 20px;
-      animation: fadeIn 2s ease forwards;
       opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .hero-content.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .hero h1 {
@@ -160,7 +172,7 @@
       background-color: #f0f0f0;
       padding: 30px;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
@@ -193,14 +205,21 @@
       .btn {
         padding: 10px 20px;
       }
+
+      /* El parallax amb background-attachment: fixed no funciona bé en mòbils, aquí ho canviem */
+      .hero {
+        background-attachment: scroll;
+      }
     }
   </style>
 </head>
 <body>
-
   <!-- Preloader -->
   <div id="preloader">
-    <img src="https://i.pinimg.com/originals/44/0b/9d/440b9dc08fefeff13ec30dc0ae6a09df.gif" alt="Carregant el contingut del lloc web">
+    <img
+      src="https://i.pinimg.com/originals/44/0b/9d/440b9dc08fefeff13ec30dc0ae6a09df.gif"
+      alt="Carregant el contingut del lloc web"
+    />
   </div>
 
   <header>
@@ -220,7 +239,10 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Transformació Digital Industrial</h1>
-      <p>Optimitzem la producció, millorem la traçabilitat i reduïm l’impacte ambiental a través de la innovació.</p>
+      <p>
+        Optimitzem la producció, millorem la traçabilitat i reduïm
+        l’impacte ambiental a través de la innovació.
+      </p>
       <a href="serveis.html" class="btn">Descobreix més</a>
     </div>
   </section>
@@ -230,15 +252,24 @@
     <div class="features-grid">
       <div class="feature">
         <h3>Eficiència Intel·ligent</h3>
-        <p>Integració de sensors, IoT i IA per automatitzar processos productius i augmentar el rendiment.</p>
+        <p>
+          Integració de sensors, IoT i IA per automatitzar processos productius
+          i augmentar el rendiment.
+        </p>
       </div>
       <div class="feature">
         <h3>Traçabilitat Total</h3>
-        <p>Seguiment digital dels productes des del proveïdor fins al client final amb tecnologia Blockchain.</p>
+        <p>
+          Seguiment digital dels productes des del proveïdor fins al client
+          final amb tecnologia Blockchain.
+        </p>
       </div>
       <div class="feature">
         <h3>Gestió Sostenible</h3>
-        <p>Control i optimització de residus industrials amb eines de Big Data i plataformes digitals.</p>
+        <p>
+          Control i optimització de residus industrials amb eines de Big Data i
+          plataformes digitals.
+        </p>
       </div>
     </div>
   </section>
@@ -248,13 +279,26 @@
   </footer>
 
   <script>
+    // Preloader
     window.addEventListener('load', () => {
       setTimeout(() => {
         const preloader = document.getElementById('preloader');
         preloader.style.display = 'none';
       }, 3000);
     });
-  </script>
 
+    // Animar el text de la secció hero al fer scroll
+    window.addEventListener('scroll', () => {
+      const heroContent = document.querySelector('.hero-content');
+      const heroSection = document.querySelector('.hero');
+      const rect = heroSection.getBoundingClientRect();
+
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        heroContent.classList.add('visible');
+      } else {
+        heroContent.classList.remove('visible');
+      }
+    });
+  </script>
 </body>
 </html>
